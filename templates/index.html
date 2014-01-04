@@ -20,15 +20,37 @@
 
         <h1>wordy weather</h1>
         <h2>forecasts for humans.</h2>
-        <input
-            id="zip-input" type="text" pattern="^\d{5}$"
-            value="zip code"
-            onblur="if(value=='') value = 'zip code'" 
-            onfocus="if(value=='zip code') value = ''"
-        >
-        <button id="zip-submit" type="submit">Submit</button>
+        <div id="error">Sorry, make sure your zip code is made of five numbers and try again.</div>
+        <script type="text/javascript">
+        function go () {
+            url = 'http://localhost:5000/' + document.getElementById('zip-input').value
+            window.location = url
+        }
+        </script>
+        <form name="zip-form" action="javascript:go(); return false;">
+            <input
+                id="zip-input" name="zip-input" type="text" pattern="^\d{5}$"
+                value="zip code"
+                onblur="if(value=='') value = 'zip code'" 
+                onfocus="if(value=='zip code') value = ''"
+            >
+            <button id="zip-submit" type="submit" value="submit">Submit</button>
+        </form>
 
-        <script src="js/main.js"></script>
+        <script src="static/js/validate.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var validator = new FormValidator('zip-form', [{
+                name: 'zip-input',
+                rules: 'is_natural|exact_length[5]'
+            }],function(errors,event){
+                if (errors.length > 0) {
+                    document.getElementById('error').style.display = "inline";
+                }
+                else {
+                    document.getElementById('error').style.display = "none";
+                }
+            })
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
