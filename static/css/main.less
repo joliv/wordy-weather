@@ -13,3 +13,59 @@ h2 {
 	font-weight: 100;
 	margin: 5px;
 }
+
+#zip-input {
+	height: 1.5em;
+	width: 4.5em;
+	margin: 1em;
+	background: darken(white, 0.5%);
+	border-style: solid;
+	border-color: #999999;
+	border-width: 1px;
+	.box-shadow(inset 0px 0px 5px 0px, rgba(50, 50, 50, 0.2));
+	outline: none;
+	font-size: 2em;
+	font-weight: 100;
+	color: gray;
+	text-align: center;
+	.center();
+}
+
+#zip-input:focus {
+	border-color: #5A5A5A;
+	color: #2C2C2C;
+}
+
+#zip-submit {
+	height: 3em;
+	width: 8em;
+	background: rgb(20, 160, 87);
+	font-weight: 800;
+	color: whitesmoke;
+	border: none;
+	outline: none;
+	display: block;
+	.center();
+}
+
+#zip-submit:hover {
+	background: darken(rgb(20, 160, 87),5%);
+	color: darken(white,5%);
+}
+
+#zip-submit:active {
+	background: darken(rgb(20, 160, 87),10%);
+	color: darken(white,10%);
+}
+
+.center(){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+  box-shadow:         @style @c;
+}

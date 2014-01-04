@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,9 +20,14 @@
 
         <h1>wordy weather</h1>
         <h2>forecasts for humans.</h2>
+        <input
+            id="zip-input" type="text" pattern="^\d{5}$"
+            value="zip code"
+            onblur="if(value=='') value = 'zip code'" 
+            onfocus="if(value=='zip code') value = ''"
+        >
+        <button id="zip-submit" type="submit">Submit</button>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
