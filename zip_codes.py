@@ -25,3 +25,9 @@ def city(zip_code):
 	for name in c.fetchall():
 		names.append(name[0])
 	return names
+
+def url(zone):
+	query = (zone,)
+	conn = sqlite3.connect('zip_codes.db')
+	c = conn.cursor()
+	c.execute('SELECT forecast FROM zones WHERE zone=?',query)
