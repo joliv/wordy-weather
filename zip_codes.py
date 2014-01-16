@@ -15,3 +15,13 @@ def station_zone(zip_code):
 	c = conn.cursor()
 	c.execute('SELECT station,zone FROM lookup WHERE zipcode=?',query)
 	return c.fetchone()
+
+def city(zip_code):
+	query = (zip_code,)
+	conn = sqlite3.connect('zip_codes.db')
+	c = conn.cursor()
+	c.execute('SELECT city FROM cities WHERE zipcode=?',query)
+	names = []
+	for name in c.fetchall():
+		names.append(name[0])
+	return names
