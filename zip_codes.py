@@ -31,3 +31,4 @@ def url(zone):
 	conn = sqlite3.connect('zip_codes.db')
 	c = conn.cursor()
 	c.execute('SELECT forecast FROM zones WHERE zone=?',query)
+	return c.fetchone()[0]
