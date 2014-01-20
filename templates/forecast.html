@@ -7,7 +7,7 @@
         <meta name="description" content="A verbose weather site.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="static/img/favicon.ico">
-        
+
         <link rel="apple-touch-icon" href="static/img/apple-touch-icon-precomposed.png">
         <meta name="apple-mobile-web-app-title" content="weather">
 
@@ -21,27 +21,29 @@
 
         <a href="../"><h1>wordy weather</h1></a>
         <h2 id="city">{{ city }}</h2>
-        <table id="alerts">
-            <tbody>
-                {% for alert in alerts %}
-                <tr>
-                    <td>{{ alert }}</td>
-                </tr>
+        <div id="wrapper">
+            <table id="alerts">
+                <tbody>
+                    {% for alert in alerts %}
+                    <tr>
+                        <td>{{ alert }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table id="forecast">
+                <tbody>
+                {% for day,desc in forecast %}
+                    <tr>
+                        <td class="day">{{ day }}</td>
+                        <td class="desc">{{ "—".join(desc) }}</td>
+                    </tr>
                 {% endfor %}
-            </tbody>
-        </table>
-        <table id="forecast">
-            <tbody>
-            {% for day,desc in forecast %}
-                <tr>
-                    <td class="day">{{ day }}</td>
-                    <td class="desc">{{ "—".join(desc) }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-        <div id="thanks">thanks to the national weather service at noaa for
-        being really cool and providing all this information.</div>
+                </tbody>
+            </table>
+            <div id="thanks">thanks to the national weather service at noaa for
+            being really cool and providing all this information.</div>
+        </div>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
