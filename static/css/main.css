@@ -134,3 +134,7 @@ table {
   font-weight: 400;
   text-align: center;
 }
+#error-code {
+  display: block;
+  text-align: center;
+}
