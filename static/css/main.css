@@ -1,0 +1,119 @@
+h1,
+h2 {
+  text-align: center;
+}
+h1 {
+  font-size: 4em;
+  font-weight: 800;
+  margin: 5px;
+}
+h2 {
+  font-size: 2em;
+  font-weight: 100;
+  margin: 5px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: inherit;
+}
+#zip-input {
+  height: 1.5em;
+  width: 150px;
+  margin: 1em;
+  background: none;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  outline: none;
+  font-size: 2em;
+  font-weight: 100;
+  color: black;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#zip-submit {
+  height: 3em;
+  width: 150px;
+  background: none;
+  font-weight: 800;
+  color: black;
+  border: solid black 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#zip-submit:hover {
+  background: black;
+  color: white;
+}
+#error {
+  display: none;
+  text-align: center;
+  margin-top: 2em;
+  color: red;
+  padding: .25em;
+  border: solid red 1px;
+  border-left: none;
+  border-right: none;
+}
+#bad-zip-code {
+  text-align: center;
+  margin: .5em;
+  color: red;
+  font-size: 3em;
+  font-weight: 800;
+}
+#bad-zip-desc {
+  text-align: center;
+}
+#back-link {
+  display: inherit;
+  text-align: center;
+  margin: 1.5em;
+  color: #308bff;
+}
+#city {
+  margin-bottom: 1em;
+}
+table {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+table .day {
+  width: 20%;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+table .desc {
+  width: 80%;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+tr {
+  padding: 1em;
+  border-bottom: solid black 1px;
+}
+#thanks {
+  font-style: italic;
+  text-align: center;
+  margin: .5em;
+}
+#error-msg {
+  font-size: 3em;
+  margin-top: .5em;
+}
+#error-desc {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
