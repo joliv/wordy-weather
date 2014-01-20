@@ -5,7 +5,6 @@ from flask import send_from_directory
 import zip_codes
 import weather
 app = Flask(__name__)
-app.debug = True
 
 @app.route("/")
 def index():
@@ -35,4 +34,4 @@ def favicon():
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
