@@ -24,6 +24,10 @@ def forecast(zip_code):
 def page_not_found(error):
     return render_template('404.html'), 404
 
+@app.errorhandler(500)
+def server_error(error):
+	return render_template('500.html'), 500
+
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static/img'),
