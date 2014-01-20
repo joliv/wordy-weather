@@ -21,6 +21,10 @@ def parse(txt):
 		for line in txt]
 	start,end = day_range(txt)
 	forecast = txt[start:end]
+	forecast = [
+		line.lower()
+		for line in forecast
+	]
 	day_indices = [(i) for i,line in enumerate(forecast)
 		if line.startswith('.')]
 	grouped = [
