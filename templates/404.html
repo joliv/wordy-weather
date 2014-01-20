@@ -6,13 +6,13 @@
         <title>wordy weather</title>
         <meta name="description" content="A verbose weather site.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="static/img/favicon.ico">
+        <link rel="shortcut icon" href="../static/img/favicon.ico">
 
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-        <link rel="stylesheet" href="static/css/normalize.css">
-        <link rel="stylesheet/less" type="text/css" href="static/css/main.less">
-        <script src="static/js/less-1.6.0.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="../static/css/normalize.css">
+        <link rel="stylesheet/less" type="text/css" href="../static/css/main.less">
+        <script src="../static/js/less-1.6.0.min.js" type="text/javascript"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,19 +20,9 @@
         <![endif]-->
 
         <a href="../"><h1>wordy weather</h1></a>
-        <h2 id="city">{{ city }}</h2>
-        <table>
-        {% for day,desc in forecast %}
-            <tbody>
-                    <tr>
-                        <td class="day">{{ day }}</td>
-                        <td class="desc">{{ desc }}</td>
-                    </tr>
-            </tbody>
-        {% endfor %}
-        </table>
-        <div id="thanks">thanks to the national weather service at noaa for
-        being really cool and providing all this information.</div>
+        <h2 id="error-msg">hey</h2>
+        <h3 id="error-desc">something went wrong with that url, sorry</h3>
+        <a id="back-link" href="../">back</a>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
