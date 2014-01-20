@@ -23,7 +23,7 @@ def city(zip_code):
 	c.execute('SELECT city FROM cities WHERE zipcode=?',query)
 	names = []
 	for name in c.fetchall():
-		names.append(name[0])
+		names.append(name[0].lower())
 	return names
 
 def url(zone):
