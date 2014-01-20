@@ -21,6 +21,14 @@ a:hover {
 a:visited {
   color: inherit;
 }
+::selection {
+  background-color: black;
+  color: white;
+}
+::-moz-selection {
+  background-color: black;
+  color: white;
+}
 #zip-input {
   height: 1.5em;
   width: 150px;
