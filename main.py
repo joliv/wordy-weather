@@ -1,5 +1,7 @@
+import os
 from flask import Flask
 from flask import render_template
+from flask import send_from_directory
 import zip_codes
 import weather
 app = Flask(__name__)
@@ -17,6 +19,11 @@ def forecast(zip_code):
 	forecast = weather.parse(txt)
 	print(forecast)
 	return render_template("forecast.html",city=city,forecast=forecast)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static/img'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 if __name__ == "__main__":
     app.run(debug=True)
