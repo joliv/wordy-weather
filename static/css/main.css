@@ -88,20 +88,29 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-table .day {
+#forecast {
+  border-top: solid black 1px;
+}
+#forecast tr {
+  padding: 1em;
+  border-bottom: solid black 1px;
+}
+#forecast .day {
   width: 20%;
   padding-right: 1em;
   padding-top: .5em;
   padding-bottom: .5em;
 }
-table .desc {
+#forecast .desc {
   width: 80%;
   padding-top: .5em;
   padding-bottom: .5em;
 }
-tr {
-  padding: 1em;
-  border-bottom: solid black 1px;
+#alerts {
+  font-style: italic;
+}
+#alerts td {
+  padding: .5em 0em;
 }
 #thanks {
   font-style: italic;

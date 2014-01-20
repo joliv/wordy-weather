@@ -17,7 +17,16 @@
 
         <a href="../"><h1>wordy weather</h1></a>
         <h2 id="city">{{ city }}</h2>
-        <table>
+        <table id="alerts">
+            <tbody>
+                {% for alert in alerts %}
+                <tr>
+                    <td>{{ alert }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table id="forecast">
         {% for day,desc in forecast %}
             <tbody>
                     <tr>
