@@ -27,14 +27,14 @@
             </tbody>
         </table>
         <table id="forecast">
-        {% for day,desc in forecast %}
             <tbody>
-                    <tr>
-                        <td class="day">{{ day }}</td>
-                        <td class="desc">{{ "—".join(desc) }}</td>
-                    </tr>
+            {% for day,desc in forecast %}
+                <tr>
+                    <td class="day">{{ day }}</td>
+                    <td class="desc">{{ "—".join(desc) }}</td>
+                </tr>
+            {% endfor %}
             </tbody>
-        {% endfor %}
         </table>
         <div id="thanks">thanks to the national weather service at noaa for
         being really cool and providing all this information.</div>
