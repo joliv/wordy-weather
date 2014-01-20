@@ -43,8 +43,15 @@ def parse(txt):
 		line.split('...')
 		for line in cleaned
 	]
+	unspaced = [
+		[
+			part.strip(' ')
+			for part in line
+		]
+		for line in split
+	]
 	regrouped = [
 		(line[0],line[1:])
-		for line in split
+		for line in unspaced
 	]
 	return regrouped
