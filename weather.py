@@ -44,7 +44,7 @@ def parse(txt):
 		for line in cleaned
 	]
 	regrouped = [
-		(line[0],"&#8212;".join(line[1:]))
+		(line[0],"—".join(line[1:]))
 		for line in split
 	]
 	return regrouped
