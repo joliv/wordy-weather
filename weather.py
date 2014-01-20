@@ -47,4 +47,8 @@ def parse(txt):
 		(line[0],"—".join(line[1:]))
 		for line in split
 	]
+	attempt = [
+		(day.encode('UTF-8'),desc.encode('UTF-8'))
+		for day,desc in regrouped
+	]
 	return regrouped
