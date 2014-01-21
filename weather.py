@@ -55,8 +55,11 @@ def parse(txt):
 		for line in unspaced
 	]
 	alerts = []
+	remove = []
 	for line in regrouped:
 		if line[1]==['']:
 			alerts.append(line[0])
-			regrouped.remove(line)
+			remove.append(line)
+	for element in remove:
+		regrouped.remove(element)
 	return alerts,regrouped
