@@ -41,8 +41,12 @@
                 {% endfor %}
                 </tbody>
             </table>
-            <div id="thanks">thanks to the national weather service at noaa for
-            being really cool and providing all this information.</div>
+            <div id="station">
+                {{ meta[0] }}
+            </div>
+            <div id="time">
+                {{ meta[1] }}
+            </div>
         </div>
 
         <script>

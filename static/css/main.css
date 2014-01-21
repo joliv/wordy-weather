@@ -122,7 +122,8 @@ a:visited {
 #alerts td {
   padding: .5em 0em;
 }
-#thanks {
+#station,
+#time {
   font-style: italic;
   text-align: center;
   margin: .5em;

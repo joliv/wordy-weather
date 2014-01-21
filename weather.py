@@ -17,14 +17,11 @@ def day_range(txt):
 			return begin,end
 
 def parse(txt):
-	txt = [line.replace('\n','').strip(' ')
+	txt = [line.replace('\n','').strip(' ').lower()
 		for line in txt]
 	start,end = day_range(txt)
 	forecast = txt[start:end]
-	forecast = [
-		line.lower()
-		for line in forecast
-	]
+	meta = txt[4:6]
 	day_indices = [(i) for i,line in enumerate(forecast)
 		if line.startswith('.')]
 	grouped = [
@@ -62,4 +59,4 @@ def parse(txt):
 			remove.append(line)
 	for element in remove:
 		regrouped.remove(element)
-	return alerts,regrouped
+	return alerts,regrouped,meta

@@ -16,10 +16,10 @@ def forecast(zip_code):
 		return render_template("wrong_zip.html", zip_code=zip_code),404
 	city = "/".join(zip_codes.city(zip_code))
 	txt = weather.forecast_txt(zip_code)
-	alerts,forecast = weather.parse(txt)
+	alerts,forecast,meta = weather.parse(txt)
 	print(forecast)
 	return render_template(
-		"forecast.html",city=city,alerts=alerts,forecast=forecast
+		"forecast.html",city=city,alerts=alerts,forecast=forecast,meta=meta
 	)
 
 @app.errorhandler(404)
@@ -36,4 +36,4 @@ def favicon():
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
