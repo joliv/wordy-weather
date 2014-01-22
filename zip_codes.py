@@ -23,7 +23,9 @@ def city(zip_code):
 	c.execute('SELECT city FROM cities WHERE zipcode=?',query)
 	names = []
 	for name in c.fetchall():
-		names.append(name[0].lower())
+		lowercased = name[0].lower()
+		if not lowercased in names:
+			names.append(lowercased)
 	return names
 
 def url(zone):
