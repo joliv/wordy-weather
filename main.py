@@ -14,7 +14,7 @@ def index():
 def forecast(zip_code):
 	if not zip_codes.is_listed(zip_code):
 		return render_template("wrong_zip.html", zip_code=zip_code),404
-	city = "/".join(zip_codes.city(zip_code))
+	city = " / ".join(zip_codes.city(zip_code))
 	txt = weather.forecast_txt(zip_code)
 	alerts,forecast,meta = weather.parse(txt)
 	print(forecast)
