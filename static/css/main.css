@@ -36,14 +36,14 @@ a:link {
 }
 #zip-input {
   height: 1.5em;
-  width: 150px;
-  margin: .9em auto .5em;
+  width: 4em;
+  margin: .5em auto .2em;
   background: none;
-  border-style: solid;
+  border-style: none none dotted none;
   border-color: black;
   border-width: 1px;
   outline: none;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 300;
   color: black;
   text-align: center;
@@ -52,12 +52,11 @@ a:link {
   margin-right: auto;
 }
 #zip-submit {
-  height: 3em;
-  width: 150px;
   background: none;
+  font-size: 2em;
   font-weight: 900;
   color: black;
-  border: solid black 1px;
+  border: none;
   margin-bottom: 2em;
   outline: none;
   display: block;
@@ -65,8 +64,7 @@ a:link {
   margin-right: auto;
 }
 #zip-submit:hover {
-  background: black;
-  color: white;
+  text-decoration: underline;
 }
 #error {
   display: none;
