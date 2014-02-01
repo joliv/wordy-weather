@@ -57,7 +57,6 @@ a:link {
   font-weight: 900;
   color: black;
   border: none;
-  margin-bottom: 2em;
   outline: none;
   display: block;
   margin-left: auto;
@@ -75,6 +74,15 @@ a:link {
   border: solid red 1px;
   border-left: none;
   border-right: none;
+}
+#links {
+  color: gray;
+  list-style: none;
+  padding: 1em;
+  text-align: center;
+}
+#links li {
+  display: inline-block;
 }
 #bad-zip-code {
   text-align: center;
