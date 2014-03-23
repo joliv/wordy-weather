@@ -35,5 +35,10 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static/img'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+@app.route('/robots.txt')
+def robots():
+	return send_from_directory(os.path.join(app.root_path, 'static/txt'),
+                               'robots.txt', mimetype='text/plain')
+
 if __name__ == "__main__":
     app.run(debug=True)
