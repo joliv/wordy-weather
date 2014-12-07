@@ -1,0 +1,9 @@
+{{ city }}
+{% for char in city %}={% endfor %}{% if alerts %}
+{% for alert in alerts %}=> {{ alert }}{% endfor %}
+----{% endif %}{% for day,desc in forecast %}
+{{ day }} - {{ desc }}
+{% for char in day %}-{% endfor %}{% endfor %}
+{{ meta[0] }}
+{{ meta[1] }}
+

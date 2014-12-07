@@ -59,4 +59,8 @@ def parse(txt):
 			remove.append(line)
 	for element in remove:
 		regrouped.remove(element)
-	return alerts,regrouped,meta
+	emdashed = [
+		(day, "—".join(text))
+		for day, text in regrouped
+	]
+	return alerts,emdashed,meta
