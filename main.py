@@ -54,7 +54,7 @@ def api(zip_code):
 	return json.dumps({
 	    "city":city,
 	    "alerts":alerts,
-	    "forecast":forecast,
+	    "forecast":[(day, "\u2014".join(text)) for day, text in forecast],
 	    "meta":meta
 	}, indent=2, sort_keys=False) + "\n"
 

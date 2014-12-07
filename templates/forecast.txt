@@ -2,7 +2,7 @@
 {% for char in city %}={% endfor %}{% if alerts %}
 {% for alert in alerts %}=> {{ alert }}{% endfor %}
 ----{% endif %}{% for day,desc in forecast %}
-{{ day }} - {{ desc }}
+{{ day }} - {{ "\u2014".join(desc) }}
 {% for char in day %}-{% endfor %}{% endfor %}
 {{ meta[0] }}
 {{ meta[1] }}

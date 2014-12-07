@@ -39,7 +39,7 @@
                 {% for day,desc in forecast %}
                     <tr>
                         <td class="day">{{ day }}</td>
-                        <td class="desc">{{ desc }}</td>
+                        <td class="desc">{{ "\u2014".join(desc) }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
