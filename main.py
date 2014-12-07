@@ -3,6 +3,7 @@ import json
 from flask import Flask
 from flask import render_template
 from flask import send_from_directory
+from flask import jsonify
 import zip_codes
 import weather
 app = Flask(__name__)
@@ -51,12 +52,12 @@ def api(zip_code):
 	txt = weather.forecast_txt(zip_code)
 	alerts,forecast,meta = weather.parse(txt)
 	print(forecast)
-	return json.dumps({
-	    "city":city,
-	    "alerts":alerts,
-	    "forecast":[(day, "\u2014".join(text)) for day, text in forecast],
-	    "meta":meta
-	}, indent=2, sort_keys=False) + "\n"
+	return jsonify(
+	    city=city,
+	    alerts=alerts,
+	    forecast=[(day, "\u2014".join(text)) for day, text in forecast],
+	    meta=meta
+	)
 
 @app.errorhandler(404)
 def page_not_found(error):
