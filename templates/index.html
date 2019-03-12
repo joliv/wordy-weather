@@ -25,8 +25,8 @@
         <div id="error">Sorry, make sure your zip code is made of five numbers and try again.</div>
         <script type="text/javascript">
         function go () {
-            url = 'http://weather.nucleol.us/' + document.getElementById('zip-input').value
-            window.location = url
+            url = '/' + document.getElementById('zip-input').value
+            window.location.href = url;
         }
         </script>
         <form name="zip-form" action="#" onsubmit="go(); return false;">
