@@ -3,7 +3,7 @@ wordy-weather
 
 NWS forecasts for humans.
 
-Bring me online with `docker-compose up`, or `docker-compose up --build` if necessary.
+Bring me online with `docker-compose up`, `docker-compose up d` to start in the background, or `docker-compose up --build` if necessary.
 
 JSON API endpoint is `http://weather.nucleol.us/api/<zip code>`.
 
