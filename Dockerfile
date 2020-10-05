@@ -1,6 +1,6 @@
-FROM python:3.7-alpine3.9
+FROM python:3.9.1-buster
 
-LABEL Name=wordy-weather Version=0.0.1
+LABEL name=wordy-weather version=0.0.1
 ENV PORT 80
 EXPOSE 80
 
