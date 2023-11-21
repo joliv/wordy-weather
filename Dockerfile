@@ -1,4 +1,4 @@
-FROM python:3.9.1-buster
+FROM python:3.12-bookworm
 
 LABEL name=wordy-weather version=0.0.1
 ENV PORT 80

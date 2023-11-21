@@ -1,9 +1,9 @@
-version: '3'
+version: '3.3'
 
 services:
   wordy-weather:
     image: wordy-weather
+    restart: unless-stopped
     build: .
     ports:
       - 3000:80
-    restart: always

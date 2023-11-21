@@ -153,3 +153,12 @@ a:link {
   display: block;
   text-align: center;
 }
+.warn {
+  background-color: hsl(0deg 100% 98%);
+  border: solid 1px hsl(0deg 100% 90%);
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 30rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
